@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--任何一个容器都可以指定为Flex布局-->
+<!--概念：Flex容器，指定为Flex布局的容器，它的子元素为容器成员，Flex项目-->
+<!--容器默认存在两根轴：主轴和交叉轴-->
+<!--容器的属性：flex-direction flex-wrap flex-flow justify-content align-items align-contents
+
+flex-direction：属性决定，主轴的方向 取值row\row-reverse\column|column-reverse
+flex-wrap：一条轴线排不下，怎么换行  wrap|nowrap|wrap-reverse
+flex-flow：是flex-direction和flex-wap的简写形式，默认为 row nowrap
+justify-content：定义在主轴上的对齐方式
+                flex-start：与主轴的开始对齐
+                flex-end：与主轴的结束位置对齐
+                center：主轴居中
+                space-between:主轴两端对齐，均匀分布
+                space-around：主轴均匀分布
+align-items：定义在交叉轴上如何对齐
+              flex-start：
+              flex-end：
+              center：
+              baseline：
+              stretch：
+
+align-content：多根轴线的对齐方式，如果只有一根轴线，该属性不起作用
+            flex-start  交叉轴的起点
+            flex-end
+            center
+            space-between
+            space-around
+            stretch
+
+
+项目的属性：
+    以下6个属性设置在项目上：
+    order：定义项目的排列顺序，数字越小，排列越靠前
+    flex-grow:定义项目的放大比例，默认为0，即如果存在剩余空间也不放大
+    flex-shrink:定义项目缩小的比例，如果空间不足，则进行缩小，默认为1
+    flex-basis:分配多余空间之前，项目占住的主轴空间，默认auto，及项目原来的大小
+    flex:是上面三者的缩写，快捷值 auto(1,1,auto),none(0,0,auto)
+    align-self:允许项目在交叉轴上定义自己的对齐方式，默认auto，继承align-items的值
+-->
+<style>
+    .box{
+        width:200px;
+        height:200px;
+        background: #cd0000;
+        display: flex;
+        /*flex-wrap: wrap;*/
+        justify-content:flex-end;
+    }
+    .item{
+        align-self: flex-start;
+        width:50px;
+        height:50px;
+        background: black;
+        border-radius: 50%;
+    }
+    .item2{
+        /*align-self: center;*/
+        /*flex-shrink:1;*/
+    }
+</style>
+<div class="box">
+    <div class="item"></div>
+    <div class="item item2"></div>
+    <!--<div class="item item2"></div>-->
+    <!--<div class="item item2"></div>-->
+    <!--<div class="item item2"></div>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        .multi_drop_menu{background-color: #000}
+        .multi_drop_menu a{
+            text-decoration: none;
+            display:block;
+            padding:.1em .2em;
+            color:#eee;
+            border-width:3px;
+            background-color: #000;
+            border-color: transparent;
+        }
+        .multi_drop_menu a:hover{
+            color:#fff;
+            background-color: #aaa;
+        }
+        .multi_drop_menu a:active{
+            background-color: #fff;
+            color:#ccc
+        }
+        .multi_drop_menu *{padding:0; margin:0}
+        .multi_drop_menu ul{
+            float:left;
+        }
+        .multi_drop_menu li{
+            float: left;
+            list-style-type: none;
+            position: relative;
+        }
+        .multi_drop_menu li a{
+            display: block;
+            border-right-style:solid;
+        }
+        .multi_drop_menu li:last-child a{
+            border-right-style: none;
+        }
+        .multi_drop_menu li ul{
+            display: none;
+            width:9em;
+        }
+        .multi_drop_menu li ul{
+            display: none;
+            position:absolute;
+            left:0;
+            top:100%;
+            width:5em;
+        }
+        .multi_drop_menu li:hover> ul{
+            display: block;
+        }
+        .multi_drop_menu li li {
+            float:none;
+        }
+        .multi_drop_menu li li ul{
+            display: none;
+            position: absolute;
+            left:100%;
+            top:0;
+        }
+        .multi_drop_menu li li a{
+            border-right-style: none;
+            border-top-style: solid;
+        }
+    </style>
+</head>
+<body>
+<nav class="multi_drop_menu">
+    <ul>
+        <li><a href="#">权利</a></li>
+        <li><a href="#">金钱</a></li>
+        <li><a href="#">爱情</a></li>
+        <li>
+            <a href="#">使命</a>
+            <ul>
+                <li><a href="#">体育明星</a></li>
+                <li><a href="#">电影明星</a>
+                    <ul>
+                        <li><a href="#">山下智久</a></li>
+                        <li><a href="#">道枝骏佑</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摇滚明星</a></li>
+                <li><a href="#">音乐明星</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">体育明星</a></li>
+                <li><a href="#">电影明星</a>
+                    <ul>
+                        <li><a href="#">山下智久</a></li>
+                        <li><a href="#">道枝骏佑</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">摇滚明星</a></li>
+                <li><a href="#">音乐明星</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</nav>
+</body>
+</html>

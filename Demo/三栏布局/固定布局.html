@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定布局</title>
+    <style>
+        #wrapper{
+            margin:0 auto;
+            border:1px solid;
+            width:960px;
+        }
+        article{
+            background:#ffed53;
+            float:left;
+            width:600px;
+            /*word-wrap:break-word;*/
+        }
+       article.inner{
+            padding:10px 20px;
+        }
+        nav{
+            width:150px;
+            float:left;
+            background:#dcd9c0;
+        }
+        nav.inner{
+            padding:10px;
+        }
+        nav li{
+            list-style-type: none;
+        }
+        aside{
+            width:210px;
+            float:left;
+            background: #3f7ccf;
+        }
+        aside .inner{
+            padding:10px
+        }
+        header{
+            background:#f00;
+        }
+        footer{
+            background: #000;
+            text-align: center;
+            clear: both;
+        }
+        .inner img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <!--标题-->
+        标题
+    </header>
+    <nav>
+        <!--无序列表-->
+        <div class="inner">
+        <ul>
+            <li>link1</li>
+            <li>link2</li>
+            <li>link3</li>
+            <li>link4</li>
+        </ul>
+        </div>
+    </nav>
+    <article>
+        <!--文本元素-->
+        <div class="inner">
+            A secure communication’s channel between your computer and a server is called a VPN (Virtual Private Network). A VPN encrypts any data passing through it.
+
+            The VPN’s components are what makes it work:
+            Encryption and Security protocols - by creating a secure connection and affecting the type of data encryption, the VPN protects any data passing through the server.
+            Server - while using a VPN, your data is sent to the VPN server, and only afterwards - to the resource you are looking for.
+            It’s pretty simple - the request you sent hits the server of the resource, but your data (information) can only be moved between your device and the VPN server, which also passes through a secure communication’s channel, so that the server you are requesting cannot receive any information about you.
+
+            When connecting to a VPN, your ISP cannot decrypt the data itself or track the websites you visit, but it can only track encrypted traffic coming to the VPN server.
+
+            Most often, VPN is used to protect confidential information (electronic correspondence, online banking) and to view blocked sites from anywhere.
+            VPN is also used to hide the real location by changing your IP address, which changes according to the server you are connected to.
+
+        </div>
+        </article>
+    <aside>
+        <!--文本-->
+        <div class="inner">
+            The Internet has become a vital part of our everyday lives; we keep our information, our media, our property in a supposedly “safe” place.
+            So what happens when our private data’s security is compromised? Or when strangers can access all that we keep sealed and locked?
+
+            It is clear that you need to have your own security network. You need to have a VPN.
+            A technology that allows you to generate a connection between two or more computers or servers through another network is called VPN (Virtual Private Network).
+            Using encryption and cryptography makes the security level in the core network irrelevant, allowing you to use even public Internet for the connection.
+
+        </div>
+
+    </aside>
+    <footer>
+        <!--文本-->
+        footer
+    </footer>
+</div>
+</body>
+</html>

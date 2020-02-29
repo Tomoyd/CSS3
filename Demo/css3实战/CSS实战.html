@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实战CSS3</title>
+    <style>
+        body{
+            font-family:Arial,"Times New Roman",sans-serif;
+            background-color: #efefef;
+            margin:0;
+        }
+        #wrapper{
+            width:980px;
+            margin:0 auto 20px;
+        }
+        header{
+            position:relative;
+            height: 70px;
+            margin:10px 0;
+            background-color: #FFF;
+            border-radius: 20px 0 20px;
+            box-shadow:0 12px 8px -9px #555555;
+            padding:1px;
+        }
+        header section#title{
+            position:absolute;
+            width:500px;
+            height: 65px;
+            left:0;
+            top:0;
+        }
+        header h1{
+            padding:9px 12px 0;
+            font-family: sans-serif;
+            font-weight: 900;
+            font-size:1.5em;
+            line-height: .2;
+            letter-spacing: -.025em;
+            color:#4eb8e6;
+        }
+        header h2{
+            padding:0 12px;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size:.9em;
+            line-height: .4;
+            letter-spacing: -.025em;
+            color:#333;
+        }
+        form.search{
+            position:absolute;
+            width:150px;
+            top:23px;
+            right:20px;
+        }
+        .search input{
+            float: right;
+            width:70px;
+            padding:2px 0 3px 5px;
+            border-radius: 10px 0;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size:1em;
+            color:#888;
+            outline:none;
+            -webkit-transition:2s width;
+
+        }
+        .search input:focus{width:140px}
+        .search label{display:none}
+        form.search input{background-color: #fff}
+        form.search input::-webkit-input-placeholder{color:#ccc}
+        nav.menu{
+            text-align: center;
+            margin:10px auto;
+            padding:0;
+            font-size: .8em;
+        }
+        nav.menu>ul{display: inline-block}
+        nav.menu li{
+            float:left;
+            list-style-type:none;
+            position: relative;
+        }
+        nav.menu li a{
+            display:block;
+            padding:.25em .8em;
+           font-weight: 600;
+            font-size:1.2em;
+            text-align: left;
+            color:#fff;
+            text-decoration: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav.menu li.choice1 a{background-color: #f58c21}
+        nav.menu li.choice2 a{background-color: #4eb8ea}
+        nav.menu li.choice3 a{background-color: #d6e636}
+        nav.menu li.choice4 a{background-color: #ee4c98}
+        nav.menu li.choice5 a{background-color: #f58c21}
+        nav.menu li:hover a{
+            color:#555;
+            border-color:#fff;
+            border:0;
+        }
+        nav.menu li:last-child a{border-bottom-right-radius:10px;}
+        nav.menu li:first-child a{border-top-left-radius:10px;}
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <section id="title">
+            <h1>Stylin&#8217;with CSS</h1>
+            <h2>The Blog and Books Of Charles Wyke-Smith</h2>
+        </section>
+        <nav class="menu">
+           <ul>
+               <li class="choice1"><a href="#">Articles</a></li>
+               <li class="choice2"><a href="#">Books</a></li>
+               <li class="choice3"><a href="#">Resources</a></li>
+               <li class="choice4"><a href="#">BookShelf</a></li>
+               <li class="choice5"><a href="#">Contact Me</a></li>
+           </ul>
+        </nav>
+        <form class="search" action="#" method="post">
+            <label for="user_name">search</label>
+            <input type="text" id="user_name" placeholder="search" name="user_name">
+        </form>
+    </header>
+    <section id="feature_area">
+        <article id="blog_leadoff">
+
+        </article>
+        <aside>
+            <form>
+
+            </form>
+            <nav>
+
+            </nav>
+        </aside>
+    </section>
+    <section id="promo_area">
+        <article>
+            <div class="inner"></div>
+        </article>
+        <article>
+            <div class="inner"></div>
+        </article>
+        <article>
+            <div class="inner"></div>
+        </article>
+        <article>
+            <div class="inner"></div>
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纵向菜单</title>
+    <style>
+        *{padding:0;margin:0;}
+        nav{margin:50px;width:150px}
+        .list1 ul{border:1px solid #f00;border-radius:3px;padding:0}
+        .list1 li{
+            list-style-type: none;
+        }
+        .list1 li+li a{
+            border-top:1px solid #f00;
+        }
+        .list1 a{
+            display:block;
+            padding: 3px 10px;
+            text-decoration: none;
+            font:20px Arial sans-serif;
+            color:#000;
+        }
+        .list1 a:hover{
+            color:#069;
+            background: #ffed53;
+        }
+    </style>
+</head>
+<body>
+<nav class="list1">
+    <ul>
+        <li><a href="#">Alternative</a></li>
+        <li><a href="#">country</a></li>
+        <li><a href="#">jazz</a></li>
+        <li><a href="#">rock</a></li>
+    </ul>
+</nav>
+</body>
+</html>

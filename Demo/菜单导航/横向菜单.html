@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向菜单</title>
+    <style>
+        .list1 ul{
+            overflow: hidden;
+            padding:0;
+            margin:0;
+        }
+        .list1 li{
+            float: left;
+            list-style-type: none;
+        }
+        .list1 a{
+            display: block;
+            padding:3px 10px;
+            text-decoration: none;
+        }
+        .list1 li+li a{
+            border-left:1px solid #000;
+        }
+        .list1 a:hover{
+            color:#555;
+            background: #ffc73c;
+        }
+    </style>
+</head>
+<body>
+<nav class="list1">
+    <ul>
+        <li><a href="#">张三</a></li>
+        <li><a href="#">李四</a></li>
+        <li><a href="#">王二</a></li>
+        <li><a href="#">麻子</a></li>
+    </ul>
+</nav>
+</body>
+</html>

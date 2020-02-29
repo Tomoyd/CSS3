@@ -1,0 +1,38 @@
+.box{
+    text-align:center;
+    padding: 10px;
+    background-color: #cd0000;
+}
+.content{
+    display:inline-block;
+    text-align: left;
+}
+.ao,
+.tu {
+    display: inline-block;
+    width:0;
+}
+.ao:before{
+    content:"Love你Love";
+    outline:2px solid #cd0000;
+    color:transparent;
+}
+.tu{
+    margin-left:100px;
+    direction: rtl;
+}
+.tu:before{
+    content: "你Love你";
+    outline: 2px solid #cd0000;
+    color:transparent;
+
+}
+.element {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s;
+}
+:checked ~ .element {
+    max-height: 666px;
+}
+

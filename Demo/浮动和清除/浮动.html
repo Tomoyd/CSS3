@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动和清除</title>
+    <style>
+
+        p{
+            margin:0;
+            border:10px solid #333;
+            height:300px;
+            float: left;
+            width:300px;
+            overflow: auto;
+            overflow-wrap:break-word;
+        }
+
+        img{
+            float:left;
+            margin:0;
+        }
+
+        span{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<span>这是一个Boy</span>
+<span style="display:block;margin:100px;overflow:hidden">
+<img src="../boy.jpg" width="200px" alt="Boy">
+    <p>
+   <span>
+    这是一个Boy111111111111111111
+        11111111111111111111111111111111111111111111111111111111111
+    111111111111111111111111111111111111111111111111111111111111111111111111
+ </span>
+    </p>
+    </span>
+</body>
+</html>
