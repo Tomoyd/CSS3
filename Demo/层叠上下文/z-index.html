@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .content{
+            position:absolute;
+            display: inline-block;
+            width:300px;
+            background-color: #cd0000;
+            height: 300px;
+        }
+        .content p{
+            position: relative;
+            background-color: blue;
+            height: 10px;
+            width:800px;
+            display: none;
+        }
+        .content:hover p{
+            z-index: 10;
+            display: block;
+        }
+        .content + div{
+            display: inline-block;
+            margin-left:100px;
+            background-color: #f58c21;
+            width:300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<!-- 同级元素会形成堆叠上下文，position的值都为为static ，
+或者都为其他三个值中的一个时，后面的总是在前面的上面，
+否则 position为脱离文档的值时，总是在值为static前面
+
+z-index可以改变相同控制元素层叠上下文的顺序，不过两个元素都不能是static时才能有效的互相切换
+在z-index 只对position static之外的元素有效-->
+<div class="content">
+    <p></p>
+    <p></p>
+</div>
+<div>
+</div>
+</body>
+</html>

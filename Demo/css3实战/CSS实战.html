@@ -63,7 +63,7 @@
             font-size:1em;
             color:#888;
             outline:none;
-            -webkit-transition:2s width;
+            -webkit-transition:1s width;
 
         }
         .search input:focus{width:140px}
@@ -102,8 +102,89 @@
             border-color:#fff;
             border:0;
         }
+        nav.menu li li:hover{
+            font-weight: 600;
+        }
         nav.menu li:last-child a{border-bottom-right-radius:10px;}
         nav.menu li:first-child a{border-top-left-radius:10px;}
+        nav.menu li ul{
+            opacity:0;
+            padding:0;
+            width:100px;
+            visibility: hidden;
+            position:absolute;
+            background:#FF0;
+            left:0;
+            top:100%;
+            -webkit-transition: 1s all;
+            -moz-transition: 1s all;
+            transition:1s all;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px
+        }
+        nav.menu li:hover>ul{
+            opacity:1;
+            visibility: visible;
+        }
+        nav.menu li li{
+            float:none;
+            padding:10px 10px;
+        }
+        nav.menu li li+li{
+            border-top: 1px solid #d3d3d3;
+        }
+        nav.menu li li:first-child{
+            border-radius:0;
+
+        }
+        nav.menu li li:last-child{
+            border-bottom: 1px solid #d3d3d3;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px
+        }
+        .no-csstransitions nav.menu li ul{
+            visibility: visible;
+            opacity: 1;
+            display: none;
+        }
+        .no-csstransitions nav.menu li:hover{
+            display:block;
+        }
+    section#feature_area{
+        overflow: hidden;
+        margin:16px 0 0;
+        padding:0 0 10px
+    }
+        section#feature_area article {float:left; width:66%;}
+        section#feature_area aside {float:right; width:34%;}
+        section#feature_area article .inner {/*带圆角和阴影的容器*/
+            padding:12px;
+            background:#fff;
+            border-radius:20px 0;
+            box-shadow:0 12px 8px -9px #555;
+        }
+        section#feature_area article a {text-decoration:none;}/*博文标题链接*/
+        section#feature_area article img { /*照片*/
+            float:left;
+            padding:0 10px 10px 0;
+        }
+        section#feature_area article h4 { /*日期*/
+            font-family: "Source Sans Pro", helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1em;
+            color:#f58c21;
+            letter-spacing:-.025em;
+        }
+        section#feature_area article h3 { /*博文标题*/
+            font-family:Lato, helvetica, sans-serif;
+            font-style:normal;
+            font-weight:700;
+            font-size:1.75em;
+            color:#555;
+            margin:0px 0 12px 0px;
+            letter-spacing:-.05em;
+        }
     </style>
 </head>
 <body>
@@ -116,10 +197,18 @@
         <nav class="menu">
            <ul>
                <li class="choice1"><a href="#">Articles</a></li>
-               <li class="choice2"><a href="#">Books</a></li>
+               <li class="choice2"><a href="#">Books</a>
+                   <ul>
+                       <li>CSS</li>
+                       <li>JavaScript</li>
+                       <li>React</li>
+                       <li>Vue</li>
+                       <li>Jquery</li>
+                   </ul>
+               </li>
                <li class="choice3"><a href="#">Resources</a></li>
                <li class="choice4"><a href="#">BookShelf</a></li>
-               <li class="choice5"><a href="#">Contact Me</a></li>
+               <!--<li class="choice5"><a href="#">Contact Me</a></li>-->
            </ul>
         </nav>
         <form class="search" action="#" method="post">
@@ -129,7 +218,9 @@
     </header>
     <section id="feature_area">
         <article id="blog_leadoff">
-
+            <div class="inner">
+                Hello world
+            </div>
         </article>
         <aside>
             <form>
